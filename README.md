@@ -2,9 +2,9 @@
 **📌 Project Overview**
 
 **Objective:**\
-This project analyzes the **US Logistics Performance Dataset** using a combination of **data analytics** and **Generative AI (IBM Granite models via Replicate API)**
+This project analyzes the **US Logistics Performance Dataset** using a combination of **Data Analytics** and **Generative AI (IBM Granite models via Replicate API)**
 
-The goal is to uncover insights into logistics operations, including delay prediction, carrier optimization, anomaly detection, and cost forecasting. GenAI will not just analyze the US Logistics Performance Dataset to create meaningful insights but also proposing actionable recommendations to improve logistics performance.
+The goal is to uncover insights into logistics operations, especially towards delay prediction and carrier optimization. GenAI will analyze the US Logistics Performance Dataset to create meaningful insights but also proposing actionable recommendations to improve logistics performance.
 
 By combining **basic data analysis** (Python, Pandas, Matplotlib) with **GenAI-based reasoning**, this project provides both quantitative metrics and qualitative business insights.
 
