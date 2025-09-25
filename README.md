@@ -30,46 +30,33 @@ The dataset includes shipment details such as:
 ## 🔍 Insights & Findings
 
 ### 1️⃣ Predict Delivery Delays (using status, dates, distance)
-- **Factors:** Long distances, specific carriers, and seasonal shipment volumes contribute to higher delays.  
-- **Trend:** Deliveries beyond ~1,500 miles show significantly higher late delivery probability.  
-- **Business Takeaway:** Monitor long-distance shipments closely, and add buffer days for customers.
+- **Factors:** Long distances, specific carriers, and seasonal shipment volumes contribute to higher delivery delays.  
+- **Trend:** Deliveries beyond ~1,500 miles show significantly higher the probability of late delivery.  
+- **Business Takeaway:** Monitor long-distance shipments closely, evaluate carrier performance, and increace both capacity and resources during peak seasons.
 
 ---
 
 ### 2️⃣ Optimize Carrier Selection (cost vs transit time)
-- **Comparison:** Some carriers offer low cost but high transit days, while others are faster but more expensive.  
-- **Trend:** For short-haul routes, carrier **A** is cost-efficient; for long-haul, carrier **B** balances speed & cost.  
-- **Business Takeaway:** Use a **hybrid carrier strategy** based on route distance to reduce costs without impacting delivery speed.
-
----
-
-### 3️⃣ Detect Anomalies (weights vs costs)
-- **Outliers:** A few shipments show unusually high costs per kg, possibly due to fuel surcharges or data entry errors.  
-- **Trend:** Most shipments follow a linear weight–cost relationship, but anomalies stand out in high-weight, low-cost ranges.  
-- **Business Takeaway:** Investigate flagged shipments for potential billing or operational errors.
-
----
-
-### 4️⃣ Forecast Shipping Expenses (by route)
-- **Trend:** Expenses for some high-demand routes (e.g., East Coast to Midwest) are increasing steadily.  
-- **Forecast:** Costs expected to rise **5–8% in the next quarter** on busiest lanes.  
-- **Business Takeaway:** Renegotiate contracts or consider alternate carriers for cost-intensive routes.
+- **Carrier ranking**: USPS and UPS for short-distances routes. DHL, USPS, Amazon Logistics for long-distances route.
+- **Business Conclusion**: UPS is the cheapest and fastest carrier for short-distance routes. FedEx offering competitive costs and transit times for both short and long routes.
+- **Summary**:  The dataset analysis reveals that UPS is the most cost-effective carrier for short-distance shipments, while FedEx stands out for both speed and balanced performance across both short and long routes. DHL and Amazon Logistics are competitive for long-distance shipments, though they tend to be more expensive. LaserShip and USPS are also viable options, particularly for long-distance routes, but generally come with higher costs.
 
 ---
 
 ## 🤖 AI Support Explanation
 This project leverages **IBM Granite LLMs** (via Replicate API) to enhance analysis. Role of AI:
-  - Interprets raw dataset samples and generates business-level insights.  
-  - Explains trends, factors, and possible operational causes.  
-  - Suggests recommended visuals (e.g., scatter plots, boxplots, time-series) to support findings.  
+  - Interprets raw dataset samples into clear narratives.
+  - Generates structured insights by connecting metrics with operational meaning.
+  - Suggests comparisons and conclusions that go beyond raw statistics.
 
-The manual analytics are most likely only gives numbers & plots, but AI can transforms them into **actionable business insights**, bridging the gap between data science and decision-making.
+
+While traditional analytics can shows what the numbers are (delays, cost, anomalies), Generative AI is able to explains why it matters for the business and what to do next. Therefore, GenAi is able to provides human-like recommendation for logistics optimization.
 
 ---
 
 ## 🚀 Tech Stack
 - **Python (Pandas, Matplotlib, Seaborn)** – Data cleaning & visualization  
-- **Replicate API** – Access IBM Granite GenAI models  
+- **Replicate API** – Access IBM Granite Instruct GenAI models  
 - **Google Colab** – Development environment  
 
 ---
